@@ -23,7 +23,8 @@ public class ChatServlet extends HttpServlet {
     /**
      * Method generates unique room codes
      * **/
-    public String generatingRandomUpperAlphanumericString(int length) {
+    public String generatingRandomUpperAlphanumericString(int length)
+    {
         String generatedString = RandomStringUtils.randomAlphanumeric(length).toUpperCase();
         // generating unique room code
         while (rooms.contains(generatedString)){
@@ -34,7 +35,8 @@ public class ChatServlet extends HttpServlet {
         return generatedString;
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
+    {
         response.setContentType("text/plain");
 
         // send the random code as the response's content
@@ -43,6 +45,7 @@ public class ChatServlet extends HttpServlet {
 
     }
 
-    public void destroy() {
+    public void destroy()
+    {
     }
 }

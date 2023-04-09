@@ -1,48 +1,233 @@
-h1 {
-    background-color: #003c72;
-    padding: 30px;
-    text-align: left;
-    font-size: 35px;
-    color: white;
+/* chatroom page */
+h1#index-title
+{
+  color:floralwhite;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 5%;
 }
-h1 {
-    font-family: "Ubuntu", monospace;
-}
-
-lhs {
-    float: left;
-    width: 25%;
-    height: 300px;
-    background: #ff6937;
-    padding: 10px;
-}
-lhs {
-    font-family: "Arial", monospace;
+body#chat-body
+{
+  padding-top: 5%;
 }
 
-rhs {
-    float: right;
-    padding: 10px;
-    width: 70%;
-    background-color: #f1f1f1;
-    height: 300px;
-}
-rhs {
-    font-family: "Arial", monospace;
+/* room list chatroom page */
+div#index
+{
+
 }
 
-section::after {
-    content: "";
-    display: table;
-    clear: both;
+ul#room-list
+{
+  list-style: none;
+  /* no bullet points */
 }
 
-footer {
-    background-color: #003c72;
-    padding: 10px;
-    text-align: center;
-    color: white;
+li#room a
+{
+  color: floralwhite;
 }
-footer {
-    font-family: "Arial", monospace;
+
+li#room a:hover
+{
+  color: darkorange;
+}
+
+div#list-of-chat-rooms
+{
+  color:floralwhite;
+  margin-left: 5%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+button
+{
+  background-color: #49475a;
+  color: floralwhite;
+  border-radius: 7px;
+}
+
+button:hover
+{
+  color: floralwhite;
+  transition-duration: .2s;
+}
+
+input
+{
+  background-color: #49475a;
+  color: floralwhite;
+  border-radius: 7px;
+  
+}
+
+div#current-room-text
+{
+  display: inline-flex;
+}
+
+/* individual chatrooms */
+div#chat
+{
+  padding-left: 5%;
+  display: inline-flex;  
+  width: 70%;
+}
+textarea#log
+{
+  display: block;
+  height: 550px; 
+  margin: 0; 
+  padding: 0; 
+  border: 0;
+  background-color: floralwhite;
+  border-radius: 7px;
+  color: darkorange;
+  width: 1000px;
+}
+input#input
+{
+  display: block; 
+  width: 100%; 
+  border-width: 1px 0 1px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* aboutpage */
+div#aboutpage
+{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+ul#aboutpagecontributors
+{
+  color: darkorange;
+}
+ul#aboutpagetasks
+{
+  color: darkorange;
+}
+h3#aboutpageh3-2
+{
+  top: 25px;
+  color: darkorange;
+}
+
+
+/* homepage */
+div#homepage
+{
+  color:darkorange;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  align-items: center;
+  justify-content: center;
+  /* centering */
+}
+
+
+
+
+
+
+/* animations */
+@keyframes fade
+{
+  0%{opacity: 0}
+  100%{opacity: 1;}
+  /*takes opacity from 0 and gradients it to 1*/
+}
+
+
+
+
+
+
+
+
+/* headfoot */
+header
+{
+  font-size: larger;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  animation: fade 2s;
+}
+
+footer
+{
+  color: #5f668b;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  animation: fade 2s;
+}
+
+
+
+
+/* webpage formatting */
+body {
+
+  font-family: 'Chivo';
+  background-image: url("../img/wallpaperflare.com_wallpaper.jpg");
+}
+
+
+h1#homeabout
+{
+  margin: 0;
+}
+h3#homeabout
+{
+  top: 25px;
+  color: darkorange;
+}
+
+
+
+
+
+
+/* navbar */
+div#navbar
+{
+  height: 20px;
+  display: table;
+  float: left;
+  margin: 0 auto;
+}
+
+li#navli
+{
+  display: inline;
+}
+
+li#navli a
+{
+  color: #5f668b;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li#navli a:hover
+{
+  color: #ADACB5;
 }

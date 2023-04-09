@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Chat Server</title>
+    <title>About</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  
+    <meta name="theme-color" content="#fafafa">
+  
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
 </head>
 <body>
-<section>
-    <h1>Chat Server</h1>
-</section>
 
-<section>
-    <lhs>
-        <button id="index" onclick="location.href='index.html'">About</button>
-        <h3>List of chat rooms</h3>
-        <button id="btRoom" onclick="enterRoom()">Create and join new room</button>
-    </lhs>
 
-    <rhs>
-        <p>Chat Server</p>
-        <h2>Our Team</h2>
-        <p>This easy-to-use chat server was brought to you by:</p>
-        <ul>
-            <li>Ryan Liu</li>
-            <li>Jathushan Vishnukaran</li>
-        </ul>
-    </rhs>
-</section>
+
+    <div id="aboutpage">
+        <h1 id="homeabout">About</h1>
+
+        <div id ="aboutpagecontributors">
+            <h3 id="homeabout">This was made by: </h3>
+            <ul id="aboutpagecontributors">
+                <li>Ryan Liu</li>
+                <li>Jathushan Vishnukaran</li>
+            </ul>
+        </div>
+
+        <div id="aboutpagetasks">
+            <h3 id="aboutpageh3-2">Purpose is to: </h3>
+            <ul id="aboutpagetasks">
+                <li>Allow users to create new chat rooms with a unique code.</li>
+                <li>Allow users to join existing chat rooms with unique codes.</li>
+                <li>Show a list of current existing chat rooms each having their unique code.</li>
+                <li>Show all the users that message in the chat room to all participants.</li>
+                <li>Welcome users into the chat room.</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+<!-- Header Footer -->
+  <header>
+    <div id="navbar">
+      <ul>
+        <li id="navli"><a href="#" id="dashboard" onclick="window.location.href = 'index.html';">Chat Rooms</a></li>
+        <li id="navli"><a href="#" id="about" onclick="window.location.href = 'about.html';">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+
+
 </body>
 </html>
