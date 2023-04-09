@@ -1,0 +1,48 @@
+h1 {
+    background-color: #003c72;
+    padding: 30px;
+    text-align: left;
+    font-size: 35px;
+    color: white;
+}
+h1 {
+    font-family: "Ubuntu", monospace;
+}
+
+lhs {
+    float: left;
+    width: 25%;
+    height: 300px;
+    background: #ff6937;
+    padding: 10px;
+}
+lhs {
+    font-family: "Arial", monospace;
+}
+
+rhs {
+    float: right;
+    padding: 10px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px;
+}
+rhs {
+    font-family: "Arial", monospace;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color: #003c72;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+footer {
+    font-family: "Arial", monospace;
+}
