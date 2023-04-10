@@ -10,6 +10,8 @@ Our chat server will use websockets and HTML/JS/CSS. Our web chat server
 has multiple chat room, messages can only be sent to those on the same room.
 Upon joining a different room, users will automatically leave their previous
 room. A user needs to in a room in order to be able to send chat messages.
+![img.png](img.png)
+![img_1.png](img_1.png)
 
 ## Improvements:
 
