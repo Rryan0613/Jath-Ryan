@@ -1,4 +1,28 @@
-/* chatroom page */
+div#chat
+{
+  padding-left: 5%;
+  display: inline-flex;
+  width: 60%;
+}
+textarea#log
+{
+  display: block;
+  height: 550px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: darkcyan;
+  border-radius: 7px;
+  color: darkorange;
+  width: 1000px;
+}
+input#input
+{
+  display: block;
+  width: 100%;
+  border-width: 1px 0 1px 0;
+}
+
 h1#index-title
 {
   color:floralwhite;
@@ -12,7 +36,6 @@ body#chat-body
   padding-top: 5%;
 }
 
-/* room list chatroom page */
 div#index
 {
 
@@ -21,7 +44,6 @@ div#index
 ul#room-list
 {
   list-style: none;
-  /* no bullet points */
 }
 
 li#room a
@@ -44,7 +66,7 @@ div#list-of-chat-rooms
 
 button
 {
-  background-color: #49475a;
+  background-color: mediumpurple;
   color: floralwhite;
   border-radius: 7px;
 }
@@ -57,7 +79,7 @@ button:hover
 
 input
 {
-  background-color: #49475a;
+  background-color: mediumpurple;
   color: floralwhite;
   border-radius: 7px;
   
@@ -68,43 +90,19 @@ div#current-room-text
   display: inline-flex;
 }
 
-/* individual chatrooms */
-div#chat
+
+
+div#homepage
 {
-  padding-left: 5%;
-  display: inline-flex;  
-  width: 70%;
-}
-textarea#log
-{
-  display: block;
-  height: 550px; 
-  margin: 0; 
-  padding: 0; 
-  border: 0;
-  background-color: floralwhite;
-  border-radius: 7px;
-  color: darkorange;
-  width: 1000px;
-}
-input#input
-{
-  display: block; 
-  width: 100%; 
-  border-width: 1px 0 1px 0;
+  color:darkorange;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  align-items: center;
+  justify-content: center;
+
 }
 
-
-
-
-
-
-
-
-
-
-
-/* aboutpage */
 div#aboutpage
 {
   color: white;
@@ -112,55 +110,29 @@ div#aboutpage
   flex-direction: column;
   margin-top: 5%;
   margin-left: 5%;
+
 }
 ul#aboutpagecontributors
 {
   color: darkorange;
+  margin-right: 2%;
+  text-align: center;
+  list-style: none;
 }
 ul#aboutpagetasks
 {
   color: darkorange;
+  text-align: center;
+  list-style: none;
 }
 h3#aboutpageh3-2
 {
-  top: 25px;
+  top: 35px;
   color: darkorange;
+  text-align: center;
+  list-style: none;
 }
 
-
-/* homepage */
-div#homepage
-{
-  color:darkorange;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20%;
-  align-items: center;
-  justify-content: center;
-  /* centering */
-}
-
-
-
-
-
-
-/* animations */
-@keyframes fade
-{
-  0%{opacity: 0}
-  100%{opacity: 1;}
-  /*takes opacity from 0 and gradients it to 1*/
-}
-
-
-
-
-
-
-
-
-/* headfoot */
 header
 {
   font-size: larger;
@@ -172,7 +144,7 @@ header
 
 footer
 {
-  color: #5f668b;
+  color: mediumpurple;
   bottom: 0;
   width: 100%;
   position: fixed;
@@ -180,10 +152,6 @@ footer
   animation: fade 2s;
 }
 
-
-
-
-/* webpage formatting */
 body {
 
   font-family: 'Chivo';
@@ -194,19 +162,17 @@ body {
 h1#homeabout
 {
   margin: 0;
+  text-align: center;
+  list-style: none;
 }
 h3#homeabout
 {
-  top: 25px;
+  top: 35px;
   color: darkorange;
+  text-align: center;
+  list-style: none;
 }
 
-
-
-
-
-
-/* navbar */
 div#navbar
 {
   height: 20px;
@@ -222,7 +188,7 @@ li#navli
 
 li#navli a
 {
-  color: #5f668b;
+  color: mediumpurple;
   padding: 5px;
   text-decoration: none;
 }
@@ -231,3 +197,11 @@ li#navli a:hover
 {
   color: #ADACB5;
 }
+
+@keyframes fade
+{
+  0%{opacity: 0}
+  100%{opacity: 1;}
+  /*takes opacity from 0 and gradients it to 1*/
+}
+

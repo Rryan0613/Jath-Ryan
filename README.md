@@ -3,36 +3,34 @@
 
 This is the template for your Assignment 02.
 
-## Overview
-You want to create a web chat server with multiple rooms. This will allow you and your friends to chat privately.
+# ReadMe File
 
-- Check the `Canvas/Assingments/Assignment 02` for more the detailed instructions.
+## Project Information:
 
-### WebChatServer - Endpoints
+We are creating our own web chat server using a java web application project.
+Our chat server will use websocksets and HTML/JS/CSS. Our web chat server
+has multiple chat room, messages can only be sent to those on the same room.
+Upon joining a different room, users will automatically leave their previous
+room. A user needs to in a room in order to be able to send chat messages.
 
-**Connect to the websocket**
+## Improvements:
 
-From the `ChatServer` class. This will create a new client connect to the web server. The server and client communicate using `json` messages.
-- `ws://localhost:8080/WSChatServer-1.0-SNAPSHOT/ws/{roomID}`
+The improvements that we made to the interface is that we displayed the unique code that was generated to help users 
+see which room they were in. We also changed the way the buttons looked to help with visibility. Everything else 
+was just changes to the appearance of the website, for example we changed the background to a grey and white, with white color text, and for the about
+page we changed the background to all grey with orange color text. We kept the chat
+rooms and everything the same position but we made the chat room text boxed, so it would
+look cleaner.
 
+## How to run:
+To get git clone on windows open git bash if not already installed. Then on git bash input $ cd
+and the folder location. Then get the git clone link, and do $ git clone and then the link. For mac
+you would open up terminal type cd and the location to the folder. Then do git clone and paste the copy
+of the link. When the user first accesses the web page, the user would first need to create a new chat room.
+After the user will be asked to be asked to enter a username, and then a message would pop up
+to greet the new user. The user can now send messages and to send the messages the user would need
+to press the enter key button. To get to our about page you would click the about button on the top
+of the page, where it would list information about the web application, and the contributors.
 
-**GET a new (unique) room code**
-
-From the `ChatServlet` class. This will return a `text/plain` content type.
-- `http://localhost:8080/WSChatServer-1.0-SNAPSHOT/chat-servlet`
-See a sample of the response data:
-```
-1B9FN
-```
-
-### WebChatServer - client
-
-Your client is in the `webapp` folder, when started the application will run at `http://localhost:8080/WSChatServer-1.0-SNAPSHOT/`; which will load the `index.html` file.
-
-Your client-side code will be in the `js/main.js` javascript file.
-
-> Obs. Feel free to create other helper classes as you see fit.
-> 
-
-
-
+## Other resources:
+We used lecture notes, such as WSChatServerDemo that was used for reference.

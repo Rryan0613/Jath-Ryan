@@ -35,7 +35,11 @@ function enterRoom(code)
 // create the web socket
     ws = new WebSocket("ws://localhost:8080/WSChatServer-1.0-SNAPSHOT/ws/"+code);
 
-    document.getElementById("room-id-literal").innerHTML = "Current Room: " + code;
+   document.getElementById("room-id-literal").innerHTML = "Current Room: " + code;
+    let roomList = document.getElementById("room-list");
+    let newRoom = document.createElement("li");
+    newRoom.innerText = code;
+    roomList.appendChild(newRoom);
 
 // parse messages received from the server and update the UI accordingly
     ws.onmessage = function (event) {
@@ -47,6 +51,7 @@ function enterRoom(code)
         document.getElementById("log").value += message.message + "\n";
     }
 }
+
 
 
 
