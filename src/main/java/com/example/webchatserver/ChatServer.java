@@ -117,7 +117,7 @@ public class ChatServer
             currentRoom.declareUserName(userId, message);
 
             String welcomeMessage = String.format("{\"type\": \"chat\", \"message\":\"[%s] (Server %s): Welcome %s\"}", x.format(T), currentRoom.getCode(), message);
-            String historyMessage = String.format("{\"type\": \"chat\", \"message\":\"[%s] (Server %s): Here is the chat history\"}", x.format(T), currentRoom.getCode());
+            String historyMessage = String.format("{\"type\": \"chat\", \"message\":\"[%s] (Server %s): Recording the chat history, to see chat history click about\"}", x.format(T), currentRoom.getCode());
             broadMessage = String.format("{\"type\": \"chat\", \"message\":\"[%s] (Server %s): %s joined the server\"}", x.format(T), currentRoom.getCode(), message);
 
             session.getBasicRemote().sendText(welcomeMessage);

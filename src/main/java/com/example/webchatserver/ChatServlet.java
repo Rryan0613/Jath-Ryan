@@ -15,7 +15,6 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class ChatServlet extends HttpServlet {
     private String message;
 
-    //static so this set is unique
     public static Set<String> rooms = new HashSet<>();
 
 
@@ -26,7 +25,7 @@ public class ChatServlet extends HttpServlet {
     public String generatingRandomUpperAlphanumericString(int length)
     {
         String generatedString = RandomStringUtils.randomAlphanumeric(length).toUpperCase();
-        // generating unique room code
+        // generates a unique room code
         while (rooms.contains(generatedString)){
             generatedString = RandomStringUtils.randomAlphanumeric(length).toUpperCase();
         }
@@ -39,7 +38,7 @@ public class ChatServlet extends HttpServlet {
     {
         response.setContentType("text/plain");
 
-        // send the random code as the response's content
+        // sends a random code as the response's content
         PrintWriter out = response.getWriter();
         out.println(generatingRandomUpperAlphanumericString(5));
 

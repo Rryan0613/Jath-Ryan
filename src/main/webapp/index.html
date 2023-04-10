@@ -37,8 +37,10 @@
 
     <p>Open Rooms</p>
     <ul id="room-list">
-      <li id="room"></li>
-    </ul>  
+      <li id="room" onclick="getChatLog(this.innerHTML)"></li>
+    </ul>
+
+    </ul>
 
     <button id="create-room" onclick="newRoom()">Create and Join New Room</button>
 
@@ -58,15 +60,12 @@
     <div>
       <textarea title="Chat Log" id="log" readonly></textarea>
       <input title="Chat Input" id="input" type="text" autofocus/>
+      <button id="refresh-chat-log" onclick="refreshChatLog()">Refresh</button>
+
+
+
     </div>
   </div>
-
-
-
-
-
-
-
 
   <!-- Header Footer -->
   <header>

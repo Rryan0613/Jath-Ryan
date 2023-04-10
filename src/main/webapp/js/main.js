@@ -14,12 +14,28 @@ function newRoom()
         .then(response => enterRoom(response)); // enter the room with the code
 }
 
-function joinRoom(){
-    let code = document.getElementById("room-code").value;
+function joinRoom() {
+    // Get the room code from the input field
+    var roomCode = document.getElementById("room-code").value;
 
-    enterRoom(code);
+    // Fetch the chat log for the selected room
+    var chatLog = fetchChatLog(roomCode);
 
+    // Display the chat log in the text area
+    document.getElementById("log").value = chatLog;
+
+    // Update the current room text
+    document.getElementById("room-id-literal").textContent = "Room: " + roomCode;
+
+    // Clear the input field
+    document.getElementById("input").value = "";
+
+    // Scroll to the bottom of the chat log
+    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight;
 }
+
+
+
 
 document.getElementById("input").addEventListener("keyup", function (event)
 {
@@ -41,6 +57,26 @@ function enterRoom(code)
     newRoom.innerText = code;
     roomList.appendChild(newRoom);
 
+    // add click event listener to the new room list item
+    newRoom.addEventListener("click", function() {
+        // request chat history for this room
+        fetch(`http://localhost:8080/WSChatServer-1.0-SNAPSHOT/chat-history-servlet?room=${code}`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            },
+        })
+            .then(response => response.json())
+            .then(history => {
+                // display chat history for this room
+                let log = document.getElementById("log");
+                log.value = "";
+                history.forEach(message => {
+                    log.value += message.message + "\n";
+                });
+            });
+    });
+
 // parse messages received from the server and update the UI accordingly
     ws.onmessage = function (event) {
         console.log(event.data);
@@ -51,6 +87,21 @@ function enterRoom(code)
         document.getElementById("log").value += message.message + "\n";
     }
 }
+
+function refreshChatLog() {
+    document.getElementById("log").value = "";
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

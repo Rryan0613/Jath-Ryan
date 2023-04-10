@@ -125,9 +125,17 @@ ul#aboutpagetasks
   text-align: center;
   list-style: none;
 }
+
+ul#Instructions
+{
+  color: darkorange;
+  text-align: center;
+  list-style: none;
+}
+
 h3#aboutpageh3-2
 {
-  top: 35px;
+  top: 50px;
   color: darkorange;
   text-align: center;
   list-style: none;
@@ -165,9 +173,18 @@ h1#homeabout
   text-align: center;
   list-style: none;
 }
+
+h3#Step-By-Step
+{
+  top: 50px;
+  color: darkorange;
+  text-align: center;
+  list-style: none;
+}
+
 h3#homeabout
 {
-  top: 35px;
+  top: 50px;
   color: darkorange;
   text-align: center;
   list-style: none;
